@@ -1,4 +1,9 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;
+
+500;700&display=swap);@charset "UTF-8";
+body {
+  font-family: "Open Sans", sans-serif;
+}
 
 /*!
  * Bootstrap v4.6.1 (https://getbootstrap.com/)
@@ -10951,10 +10956,5 @@ a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6;
   }
-}
-
-a,
-button {
-  cursor: pointer;
 }
 

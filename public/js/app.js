@@ -49591,10 +49591,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/sass/front_office.scss":
-/*!******************************************!*\
-  !*** ./resources/sass/front_office.scss ***!
-  \******************************************/
+/***/ "./resources/sass/guest/front_office.scss":
+/*!************************************************!*\
+  !*** ./resources/sass/guest/front_office.scss ***!
+  \************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -49603,15 +49603,15 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ 0:
-/*!************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/front_office.scss ***!
-  \************************************************************************************************/
+/*!******************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/guest/front_office.scss ***!
+  \******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\Francesco\Desktop\FSDeveloper\Tutorati\Esercizi-PHP\esercizio63\laravel-api\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! C:\Users\Francesco\Desktop\FSDeveloper\Tutorati\Esercizi-PHP\esercizio63\laravel-api\resources\sass\app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! C:\Users\Francesco\Desktop\FSDeveloper\Tutorati\Esercizi-PHP\esercizio63\laravel-api\resources\sass\front_office.scss */"./resources/sass/front_office.scss");
+__webpack_require__(/*! C:\Users\Francesco\Desktop\FSDeveloper\Tutorati\Esercizi-PHP\esercizio64\laravel-boolpress\resources\js\app.js */"./resources/js/app.js");
+__webpack_require__(/*! C:\Users\Francesco\Desktop\FSDeveloper\Tutorati\Esercizi-PHP\esercizio64\laravel-boolpress\resources\sass\app.scss */"./resources/sass/app.scss");
+module.exports = __webpack_require__(/*! C:\Users\Francesco\Desktop\FSDeveloper\Tutorati\Esercizi-PHP\esercizio64\laravel-boolpress\resources\sass\guest\front_office.scss */"./resources/sass/guest/front_office.scss");
 
 
 /***/ })
