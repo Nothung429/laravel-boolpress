@@ -10,7 +10,7 @@
         name: 'Post',
         data() {
             return {
-                post: null
+                post: []
             }
         },
         created() {
@@ -22,6 +22,6 @@
     }
 </script>
 
-<style>
+<style lang="scss" scoped>
 
 </style> 

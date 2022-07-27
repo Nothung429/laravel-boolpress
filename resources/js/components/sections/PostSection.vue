@@ -2,10 +2,10 @@
     <div class="container my-3">
         <ul class="row">
             <li class="col-4" v-for="post in posts" :key="post.slug">
-                <div class="card p-2">                    
+                <div class="card p-2">
                     <h3>{{post.title}}</h3>
                     <p class="text-truncate">{{post.content}}</p>
-                    <router-link :to="{ name: 'post' }">View More</router-link>
+                    <router-link :to="{ name: 'post', params: {slug: post.slug} }">View More</router-link>
                 </div>
             </li>
         </ul>
