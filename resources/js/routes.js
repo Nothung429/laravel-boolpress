@@ -6,6 +6,8 @@ Vue.use(VueRouter);
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Post from "./pages/Post";
+import Categories from "./pages/Categories";
+import Category from "./pages/Category";
 
 const router = new VueRouter({
     mode: "history",
@@ -21,6 +23,16 @@ const router = new VueRouter({
             component: About,
         },
         {
+            path: "/categories",
+            name: "categories",
+            component: Categories,
+        },
+        {
+            path: "/category/:slug",
+            name: "category",
+            component: Category,
+        },
+        {
             path: "/posts/:slug",
             name: "post",
             component: Post,
@@ -29,5 +41,3 @@ const router = new VueRouter({
 });
 
 export default router
-
-{/* <router-link :to="{ name: 'single-post', params: {slug: slug} }">Leggi di più</router-link> */}

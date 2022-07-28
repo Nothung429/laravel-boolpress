@@ -1,7 +1,8 @@
 <template>
-    <div class="container">
+    <div v-if="post" class="container">
         <h1>{{post.title}}</h1>
         <p>{{post.content}}</p>
+        <p v-if="post.category">{{post.category.name}}</p>
     </div>
 </template>
 
@@ -10,7 +11,7 @@
         name: 'Post',
         data() {
             return {
-                post: []
+                post: [],
             }
         },
         created() {
@@ -24,4 +25,4 @@
 
 <style lang="scss" scoped>
 
-</style> 
+</style>

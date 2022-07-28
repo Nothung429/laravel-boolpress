@@ -10,6 +10,7 @@
                     <div class="navbar-nav">
                         <router-link :to="{ name: 'home' }" class="px-3">Home</router-link>
                         <router-link :to="{ name: 'about' }" class="px-3">About</router-link>
+                        <router-link :to="{ name: 'categories' }">Categories</router-link>
                         <a href="/admin/home" class="px-3">Login</a>
                     </div>
                 </div>
