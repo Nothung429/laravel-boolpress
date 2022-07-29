@@ -3,6 +3,12 @@
         <h1>{{post.title}}</h1>
         <p>{{post.content}}</p>
         <p v-if="post.category">{{post.category.name}}</p>
+        <div v-if="post.tags.length > 0">
+            <h4>Tag List</h4>
+            <ul>
+                <li v-for="tag in post.tags" :key="tag.id">{{tag.name}}</li>
+            </ul>
+        </div>
     </div>
 </template>
 
