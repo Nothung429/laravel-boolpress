@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Storage;
 
 use App\Post;
 use App\Category;
@@ -50,7 +51,8 @@ class PostController extends Controller
             'content' => 'required|string|max:65535',
             'published' => 'sometimes|accepted',
             'category_id' => 'nullable|exists:categories,id',
-            'tags' => 'nullable|exists:tags,id'
+            'tags' => 'nullable|exists:tags,id',
+            'image' => 'nullable|image|max:500'
         ]);        
 
         $data = $request->all();
@@ -65,7 +67,10 @@ class PostController extends Controller
 
         if(isset($data['tags'])) {
             $newPost->tags()->sync($data['tags']);
-        }        
+        };
+        if(isset($data['image'])) {
+            $newPost->image = Storage::put('uploads', $data['image']);
+        };
 
         return redirect()->route('admin.posts.show', $newPost->id);
     }
@@ -114,6 +119,7 @@ class PostController extends Controller
             'published' => 'sometimes|accepted',
             'category_id' => 'nullable|exists:categories,id',
             'tags' => 'nullable|exists:tags,id',
+            'image' => 'nullable|image|max:500'
         ]);        
         $data = $request->all();
 
@@ -128,6 +134,13 @@ class PostController extends Controller
 
         $post->tags()->sync($tags);
 
+        if(isset($data['image'])) {
+            if($post->image) {
+                Storage::delete($post->image);
+            }
+            $post->image = Storage::put('uploads', $data['image']);
+        }
+
         $post->save();
         
         return redirect()->route('admin.posts.show', $post->id);
@@ -141,6 +154,10 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
+        if($post->image) {
+            Storage::delete($post->image);
+        }
+
         $post->delete();
 
         return redirect()->route('admin.posts.index');

@@ -6,8 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
-    protected $guarded = ['tags'];
+    protected $guarded = ['tags', 'image'];
 
+    public function getImagePathAttribute()
+    {
+        return $this->image ? asset("storage/{$this->image}") : null;
+    }
     public function category() 
     {
         return $this->belongsTo('App\Category');

@@ -3,6 +3,7 @@
         <h1>{{post.title}}</h1>
         <p>{{post.content}}</p>
         <p v-if="post.category">{{post.category.name}}</p>
+        <img v-if="post.image" :src="`/storage/${post.image}`" :alt="post.title">
         <div v-if="post.tags.length > 0">
             <h4>Tag List</h4>
             <ul>

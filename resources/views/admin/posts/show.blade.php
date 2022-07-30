@@ -11,6 +11,11 @@
                     {{$post->content}}
                 </div>
             </div>
+            @if($post->image)
+            <div class="mb-3">
+                <img src="{{asset('storage/{$post->image}')}}" alt="">
+            </div>
+            @endif
         </div>
     </div>
 @endsection
